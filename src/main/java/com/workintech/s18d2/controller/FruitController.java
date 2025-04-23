@@ -28,7 +28,7 @@ public class FruitController {
         return fruitService.getByPriceAsc();
     }
 
-    @GetMapping
+    @GetMapping("/desc")
     public List<Fruit> getByPriceDesc(){
         return fruitService.getByPriceDesc();
     }
