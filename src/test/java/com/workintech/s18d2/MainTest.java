@@ -1,16 +1,15 @@
 package com.workintech.s18d2;
 
+import com.workintech.s18d2.repository.FruitRepository;
 import com.workintech.s18d2.entity.Fruit;
 import com.workintech.s18d2.entity.FruitType;
 import com.workintech.s18d2.entity.Vegetable;
 import com.workintech.s18d2.exceptions.PlantException;
-import com.workintech.s18d2.repository.FruitRepository;
 import com.workintech.s18d2.services.FruitServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -129,7 +128,7 @@ class MainTest {
     @Test
     @DisplayName("FruitRepository::getByPriceAsc should return fruits in ascending order of price")
     void testGetByPriceAsc() {
-        List<Fruit> fruits = fruitRepository.getByPriceAsc();
+        List<Fruit> fruits = fruitRepository.geyByPriceAsc();
         assertEquals(2, fruits.size());
         assertTrue(fruits.get(0).getPrice() <= fruits.get(1).getPrice());
     }
@@ -164,7 +163,7 @@ class MainTest {
     @Test
     @DisplayName("FruitService::getAll() should return all fruits")
     void testGetByPriceAscFruitService() {
-        when(mockFruitRepository.getByPriceAsc()).thenReturn(Arrays.asList(sampleFruitForFruitServiceTest));
+        when(mockFruitRepository.geyByPriceAsc()).thenReturn(Arrays.asList(sampleFruitForFruitServiceTest));
 
         List<Fruit> fruits = fruitService.getByPriceAsc();
 
