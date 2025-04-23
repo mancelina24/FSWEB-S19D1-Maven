@@ -36,11 +36,13 @@ public class Vegetable {
     @NotNull(message = "isGrownOnTree flag cannot be null")
     private Boolean isGrownOnTree ;
 
-    public Boolean getGrownOnTree() {
-        return isGrownOnTree;
+    public void setGrownOnTree(boolean isGrownOnTree)
+    {
+        this.isGrownOnTree = isGrownOnTree;
     }
 
-    public void setGrownOnTree(Boolean grownOnTree) {
-        isGrownOnTree = grownOnTree;
+    public Boolean isGrownOnTree()
+    {
+        return isGrownOnTree;
     }
 }
